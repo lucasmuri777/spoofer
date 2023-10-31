@@ -1,0 +1,47 @@
+﻿<Window x:Class="SpooferLoader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Informações do Computador" Height="400" Width="400">
+    <Grid Background="#F2000000" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/> <!-- Linha para o HWID do computador -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o rótulo do HWID -->
+            <RowDefinition Height="*"/> <!-- Linha para o Número de série da placa-mãe -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o rótulo do número de série -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o endereço MAC -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o rótulo do endereço MAC -->
+            <RowDefinition Height="*"/> <!-- Linha para exibir o HWID -->
+            <RowDefinition Height="*"/> <!-- Linha para exibir o Número de série da placa-mãe -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o botão "Clique Aqui" -->
+            <RowDefinition Height="Auto"/> <!-- Linha para o botão "Spoofar" -->
+            <RowDefinition Height="Auto"/> <!-- Linha para a linha -->
+        </Grid.RowDefinitions>
+
+        <!-- Rótulo para o HWID do computador -->
+        <Label Content="HWID do computador:" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White"/>
+
+        <!-- Rótulo para o número de série da placa-mãe -->
+        <Label Content="Número de série da placa-mãe:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Foreground="White"/>
+
+        <!-- Rótulo para o endereço MAC -->
+        <Label Content="Endereço MAC:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Foreground="White"/>
+
+        <!-- Rótulo dinâmico para exibir o HWID -->
+        <Label x:Name="hwidLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="6" Foreground="White"/>
+
+        <!-- Rótulo dinâmico para exibir o Número de série da placa-mãe -->
+        <Label x:Name="serialLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="7" Foreground="White"/>
+
+        <!-- Rótulo dinâmico para exibir o Endereço MAC -->
+        <Label x:Name="macAddressLabel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="8" Foreground="White"/>
+
+        <!-- Botão personalizado "Clique Aqui" -->
+        <Button Content="Clique Aqui" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="9" Click="Button_Click" Background="#FF2196F3" Foreground="White" FontWeight="Bold" Width="120" Height="30"/>
+
+        <!-- Botão personalizado "Spoofar" -->
+        <Button Content="Spoofar" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="10" Width="120" Height="30" Click="SpoofarButton_Click" Background="#FF2196F3" Foreground="White"/>
+
+        <!-- Linha -->
+        <Rectangle Height="1" Fill="White" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="11"/>
+    </Grid>
+</Window>
